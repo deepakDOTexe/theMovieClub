@@ -49,8 +49,8 @@ class MovieModel extends MovieEntity{
     return MovieModel(
     id : json['id'],
     video : json['video'],
-    voteCount : json['vote_count']?.toDouble() ?? 0.0, // if int is returned parse to double or if null is returned set to 0.0 as default value
-    voteAverage : json['vote_average'],
+    voteCount : json['vote_count'], // if int is returned parse to double or if null is returned set to 0.0 as default value
+    voteAverage : json['vote_average']?.toDouble() ?? 0.0,
     title : json['title'],
     releaseDate : json['release_date'],
     originalLanguage : json['original_language'],
